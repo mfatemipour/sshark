@@ -1,0 +1,35 @@
+<sshark_profiles>
+    <profile Name="TCP" captureFilter="tcp" displayFilter="" sqliteName="capture.sqlite"
+             pcapName="capture.pcap">
+        <field filed="frame.number" column="captureID" type="INTEGER" />
+        <field filed="ip.src" column="source" type="VARCHAR" />
+        <field filed="ip.dst" column="dest" type="VARCHAR" />
+        <field filed="ip.version" column="version" type="INTEGER" />
+        <field filed="ip.proto" column="protocol" type="INTEGER" />
+        <field filed="tcp.window_size_value" column="window_size" type="INTEGER" />
+    </profile>
+    <profile Name="TCP2" captureFilter="tcp" displayFilter="ip.src == 192.168.20.131" sqliteName="capture.sqlite"
+             pcapName="capture.pcap">
+        <field filed="frame.number" column="captureID" type="INTEGER" />
+        <field filed="ip.src" column="source" type="VARCHAR" />
+        <field filed="ip.dst" column="dest" type="VARCHAR" />
+        <field filed="ip.version" column="version" type="INTEGER" />
+        <field filed="ip.proto" column="protocol" type="INTEGER" />
+        <field filed="tcp.window_size_value" column="window_size" type="INTEGER" />
+    </profile>
+    <profile Name="MTP3" captureFilter="" displayFilter="" sqliteName="capture.sqlite" pcapName="capture.pcap">
+        <field filed="frame.number" column="capture_id" type="INTEGER" />
+        <field filed="mtp3.dpc" column="opc" type="VARCHAR" />
+        <field filed="mtp3.opc" column="dpc" type="VARCHAR" />
+        <field filed="mtp3.service_indicator" column="service_indicator" type="VARCHAR" />
+        <field filed="tcap.otid" column="otid" type="VARCHAR" />
+        <field filed="tcap.dtid" column="dtid" type="VARCHAR" />
+        <field filed="sccp.message_type" column="message_type" type="INTEGER" />
+        <field filed="sccp.called.digits" column="called" type="VARCHAR" />
+        <field filed="sccp.calling.digits" column="calling" type="VARCHAR" />
+        <field filed="gsm_old.invokeID" column="invoke_id" type="VARCHAR" />
+        <field filed="gsm_old.localValue" column="op_code" type="VARCHAR" />
+        <field filed="gsm_map.old.Component" column="component_type" type="VARCHAR" />
+        <field filed="gsm_map.tbcd_digits" column="imsi" type="VARCHAR" />
+    </profile>
+</sshark_profiles>
